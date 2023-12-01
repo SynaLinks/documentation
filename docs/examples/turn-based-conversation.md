@@ -11,7 +11,7 @@ In this example, we are going to implement an algorithm that emulates a multi-ag
 
 To emulate a turn-based conversation, you need to describe a loop with an exit condition. A classic example is the actor-critic scheme where an agent tries to answer while the other critiques its work.
 
-```cypher title="conversation.cypher"
+```javascript title="conversation.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -37,7 +37,7 @@ To implement this app properly, we use Program Nodes to implement the behavior o
 
 Let's implement our agents by creating two files: `actor.cypher` and `critic.cypher`.
 
-```cypher title="actor.cypher"
+```javascript title="actor.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -51,7 +51,7 @@ CREATE
 (answer)-[:NEXT]->(end)
 ```
 
-```cypher title="critic.cypher"
+```javascript title="critic.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -67,7 +67,7 @@ CREATE
 
 Now we can implement our main file and simply call our conversation program:
 
-```cypher title="main.cypher"
+```javascript title="main.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),

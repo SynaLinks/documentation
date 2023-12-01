@@ -12,7 +12,7 @@ In this initial application, you will construct a straightforward chat over docu
 
 To begin, initiate a new project using your preferred Integrated Development Environment (IDE). Afterward, include a file named `main.cypher` at the root of your project. Start with an empty program; you'll update it later.
 
-```cypher title="main.cypher"
+```javascript title="main.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -23,7 +23,7 @@ CREATE
 
 Now create a new file called `answer.cypher`. This subprogram aims to answer based on the documents loaded inside the long-term memory. This simple process can be described as follows:
 
-```cypher title="answer.cypher"
+```javascript title="answer.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -45,7 +45,7 @@ If nothing is relevant, just say that you don't know"}),
 
 Now it's time to update the main prompt program. We want to call our `answer` program but also ask the user if they want to know something else to continue the interaction. This process can be described with a conditional loop.
 
-```cypher title="main.cypher"
+```javascript title="main.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),

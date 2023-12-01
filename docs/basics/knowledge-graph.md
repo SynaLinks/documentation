@@ -23,7 +23,7 @@ With the advent of deep learning, unstructured knowledge (texts, posts, books, e
   </p>
 </figure>
 
-This novel approach to representing and working with unstructured knowledge has given rise to new applications such as vector databases and similarity-augmented generation.
+This novel approach to represent and work with unstructured knowledge has given rise to new applications such as vector databases and similarity-augmented generation.
 
 ## Combining Vector and Graph Representations
 

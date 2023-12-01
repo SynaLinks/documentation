@@ -116,7 +116,7 @@ This program structure enables the system to iteratively ask questions and refin
 
 Now let's use this program to build a simple app. For that, you need to implement a `main.cypher` file that will act as the entry point for the program.
 
-```cypher title="main.cypher"
+```javascript title="main.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),

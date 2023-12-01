@@ -14,7 +14,7 @@ Let's imagine we already have a program called `fulfill_objective` that contains
 
 This can be done using this simple code snippet:
 
-```cypher title="main.cypher"
+```javascript title="main.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -35,7 +35,7 @@ In this example, we simply halt the system if the objective does not align with 
 
 Here is the updated example:
 
-```cypher title="main.cypher"
+```javascript title="main.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
