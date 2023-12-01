@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # Graph Prompt Programming
@@ -114,9 +114,9 @@ Let's break down what this program does:
 
 This program structure enables the system to iteratively ask questions and refine the objective until it is clear.
 
-Now let's use this program to build a simple app, for that, you need to implement a `main.cypher` file that will act as entrypoint for the program.
+Now let's use this program to build a simple app. For that, you need to implement a `main.cypher` file that will act as the entry point for the program.
 
-```javascript title="main.cypher"
+```cypher title="main.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -136,14 +136,14 @@ CREATE
 
 Let's break down this main program:
 
-- `(clarify_objective:Program {name:"Clarify the Objective if needed", program:"clarify_objective"})`: This line creates a Program Node, that call the program implemented in `clarify_objective.cypher`, after executing this sub-program the program will resume to the next step.
+- `(clarify_objective:Program {name:"Clarify the Objective if needed", program:"clarify_objective"})`: This line creates a Program Node that calls the program implemented in `clarify_objective.cypher`. After executing this sub-program, the program will resume to the next step.
 
-- `(answer:Action {name:"Answer the Objective", tool:"Speak", prompt:"Please answer the Objective"})`: This line creates an Action Node that answer the Objective question.
+- `(answer:Action {name:"Answer the Objective", tool:"Speak", prompt:"Please answer the Objective"})`: This line creates an Action Node that answers the Objective question.
 
-- `(start)-[:NEXT]->(clarify_objective)`: 
+- `(start)-[:NEXT]->(clarify_objective)`: This line establishes a relationship between the start Node and the `clarify_objective` Program Node, meaning that the program will start by calling the program.
 
-- `(clarify_objective)-[:NEXT]->(answer)`:
+- `(clarify_objective)-[:NEXT]->(answer)`: This line creates a relationship indicating that, after executing the `clarify_objective` program, the next step is to perform the `answer` action.
 
-- `(answer)-[:NEXT]->(end)`: 
+- `(answer)-[:NEXT]->(end)`: This line establishes a relationship indicating that, after answering the objective, the program should proceed to the `end` node.
 
 Now you can implement almost any prompting mechanism using graphs! Your imagination is the only limit!

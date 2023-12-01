@@ -2,17 +2,17 @@
 sidebar_position: 3
 ---
 
-# Actions as Tool
+# Actions as Tools
 
-Learn about tool based systems
+Explore tool-based systems.
 
-## Learning how to operate Tools
+## Learning How to Operate Tools
 
-By learning how to operate other pieces of software, AI is gaining the ability to perform numerous specialized tasks. By designing the tools adapted to its application a developer can create any specialized AI system.
+AI's capability to perform various specialized tasks is expanding through the acquisition of skills in operating different software tools. Developers can create specialized AI systems by designing tools tailored to their applications.
 
-This ability is the core of the current approach of LLM based Agents that use Tools as action. However, because LLMs lack of robust long-term planning capability an Agent can only interact with a limited set of tools.
+This proficiency forms the foundation of the current approach for LLM-based Agents, employing Tools as actions. However, due to the limited long-term planning capabilities of LLMs, an Agent can only interact with a restricted set of tools.
 
-HybridAGI changes that by providing long-term planning capabilities thanks to its symbolic components and is agnostic of the number of tools used because the prompts used to infer the inputs are provided at each step by the interpreter.
+HybridAGI transforms this limitation by providing robust long-term planning capabilities, thanks to its symbolic components. It remains agnostic to the number of tools used, as the prompts required to infer the inputs are provided at each step by the interpreter.
 
 ## Available Tools
 

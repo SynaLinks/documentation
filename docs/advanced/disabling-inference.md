@@ -1,20 +1,20 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
 # Disabling Inference
 
-Learn how and when disabling the inference
+Learn how and when to disable inference.
 
-## When disaling inference is needed?
+## When is Disabling Inference Needed?
 
-Disabling the inference means that instead of using the LLM to infer the tool's input parameters we directly use the prompt provided in the program as input for the tool. 
+Disabling inference means that instead of using the LLM to infer the tool's input parameters, we directly use the prompt provided in the program as input for the tool.
 
-This process is needed when using tools that don't need inputs, when you want to speed up the interaction or use a tool in a way that you don't need inference.
+This process is necessary when using tools that do not require inputs, when you want to speed up the interaction, or when using a tool in a manner that doesn't need inference.
 
-### Using Tools without input
+### Using Tools without Input
 
-Sometimes the Tool do not need any input. In that case, disabling the inference is needed. This optional feature bind the prompt directly to the input of the tool, which is empty in that case.
+Sometimes, the tool does not require any input. In such cases, disabling inference becomes essential. This optional feature binds the prompt directly to the input of the tool, which is empty in that case.
 
 ```javascript title="clear_trace.cypher"
 // @desc: Cleanup the program trace
@@ -30,10 +30,10 @@ CREATE
 (clear_trace)-[:NEXT]->(end)
 ```
 
-### Speeding up the program
+### Speeding Up the Program
 
-You can use this feature to speed up your programs and add more reactivity to them.
-Or if you want to use a Tool in a way that don't need inference at runtime. For example, this code snippet use the `Shell` Tool to list the current working directory.
+You can use this feature to accelerate your programs and enhance their responsiveness.
+Or if you want to use a tool in a way that doesn't require inference at runtime. For example, this code snippet uses the `Shell` Tool to list the current working directory.
 
 ```javascript title="list_current_folder.cypher"
 // @desc: List the current folder

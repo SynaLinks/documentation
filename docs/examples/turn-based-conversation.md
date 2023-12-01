@@ -1,14 +1,17 @@
+---
+sidebar_position: 3
+---
+
 # Turn-based Conversation
-Learn how to implement a simple turn based conversation
+Learn how to implement a simple turn-based conversation.
 
-## Emulating a simple multi-agent system
+## Emulating a Simple Multi-agent System
 
-In this example we are going to implement an algorithm that emulate a multi-agent system using our neuro-symbolic framework.
+In this example, we are going to implement an algorithm that emulates a multi-agent system using our neuro-symbolic framework.
 
-To emulate a turn based conversation, you need to describe a loop with an exit condition.
-A classic example, is the actor-critic scheme where an agent try to answer while the other critique its work.
+To emulate a turn-based conversation, you need to describe a loop with an exit condition. A classic example is the actor-critic scheme where an agent tries to answer while the other critiques its work.
 
-```javascript title="conversation.cypher"
+```cypher title="conversation.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -20,7 +23,7 @@ CREATE
     name:"Critique the answer",
     program:"critic"}),
 (is_objective_answered:Decision {
-    name:"Check if the objective if correctly answered",
+    name:"Check if the objective is correctly answered",
     question:"Is the objective correctly answered?"}),
 // Structure declaration
 (start)-[:NEXT]->(actor),
@@ -30,11 +33,11 @@ CREATE
 (is_objective_answered)-[:YES]->(end)
 ```
 
-In order to implement this app properly, we use Program Nodes in order to implement the behavior of our agents in a separate file, this practice allows you to reduce implementation errors and easely modify the behavior of your agents.
+To implement this app properly, we use Program Nodes to implement the behavior of our agents in a separate file. This practice allows you to reduce implementation errors and easily modify the behavior of your agents.
 
-Let's implement our agents, create two files: `actor.cypher` and `critic.cypher`.
+Let's implement our agents by creating two files: `actor.cypher` and `critic.cypher`.
 
-```javascript title="actor.cypher"
+```cypher title="actor.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -42,14 +45,13 @@ CREATE
 (answer:Action {
     name:"Answer the objective question",
     tool:"Speak",
-    prompt:"Please answer the objective question, \
-    always reflect on your mistakes"}),
+    prompt:"Please answer the objective question, always reflect on your mistakes"}),
 // Structure declaration
 (start)-[:NEXT]->(answer),
 (answer)-[:NEXT]->(end)
 ```
 
-```javascript title="critic.cypher"
+```cypher title="critic.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -63,9 +65,9 @@ CREATE
 (critique)-[:NEXT]->(end)
 ```
 
-Now we can implement our main file, and simply call our conversation program:
+Now we can implement our main file and simply call our conversation program:
 
-```javascript title="main.cypher"
+```cypher title="main.cypher"
 CREATE
 // Nodes declaration
 (start:Control {name:"Start"}),
@@ -78,4 +80,4 @@ CREATE
 (conversation)-[:NEXT]->(end)
 ```
 
-Now you can add a personality to your agents by editing the tool's prompt, or add the use of an additional tool. Feel free to explore the posibilities offered by our framework!
+Now you can add personality to your agents by editing the tool's prompt or add the use of an additional tool. Feel free to explore the possibilities offered by our framework!
