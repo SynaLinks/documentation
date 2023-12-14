@@ -16,7 +16,7 @@ HybridAGI is the first *Programmable LLM-based Autonomous Agent* that lets you p
 
 ### Installation
 
-First, clone this repository with:
+First, clone the chat repository with:
 
 ```
 git clone https://github.com/SynaLinks/HybridAGI-chat
@@ -36,7 +36,7 @@ First you should start by opening the repository folder in your favorite IDE ([V
 ... the license and other files related to deployment
 ```
 
-Note that these folders are shared with the application container, you should use them to share data between the user and the AI system.
+Note that these folders are shared with the application container, you should use them to share data between your filesystem and the AI system.
 
 ### Echo test program
 
