@@ -11,7 +11,7 @@ HybridAGI is the first *Programmable LLM-based Autonomous Agent* that lets you p
 ## Quickstart in 5 simple steps!
 
 #### What you need to start?
-- An OpenAI API key or a functional text generation endpoint
+- A TogetherAI API key (get one at [https://api.together.xyz/](https://api.together.xyz/))
 - [Git](https://git-scm.com/downloads) and [Docker](https://www.docker.com/products/docker-desktop/)
 
 ### Installation
