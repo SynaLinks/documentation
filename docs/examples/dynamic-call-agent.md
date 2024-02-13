@@ -76,15 +76,15 @@ CREATE
 (program_search:Action {
     name:"Search for existing programs", 
     tool:"ProgramSearch",
-    prompt:"Describe in ONE short sentence what needs to be done.
-
-Ensure to use the following examples format to answer:
-- Search the answer to the given question on internet
-- Tell the answer to the User
-- Nagivate into the given folder using cd
-- Try to create the given folder
-- Clarify the objective
-
+    prompt:"Describe in ONE short sentence what needs to be done.\
+\
+Ensure to use the following examples format to answer:\
+- Search the answer to the given question on internet\
+- Tell the answer to the User\
+- Nagivate into the given folder using cd\
+- Try to create the given folder\
+- Clarify the objective\
+\
 Ensure to use the above format."}),
 (call_program:Program {
     name:"Review the available programs from the search and select the most suitable one to fulfill the objective.",
@@ -129,8 +129,8 @@ CREATE
 (call_program:Action {
     name:"Call an existing program to fullfil the Objective", 
     tool:"CallProgram",
-    prompt:"Please call the more appropriate program to fullfil the Objective.
-Please, only use the program name and remove any parameter or file extension (the .cypher).
+    prompt:"Please call the more appropriate program to fullfil the Objective.\
+Please, only use the program name and remove any parameter or file extension (the .cypher).\
 Remember to always try to call an existing program."}),
 (is_successfully_called:Decision {
     name:"Check if the program have been successfuly called",
@@ -138,8 +138,8 @@ Remember to always try to call an existing program."}),
 (try_again:Action {
     name:"Correct the program name and try again",
     tool:"CallProgram",
-    prompt:"Please correct the program name.
-Please, only use the program name and remove any parameter or file extension (the .cypher).
+    prompt:"Please correct the program name.\
+Please, only use the program name and remove any parameter or file extension (the .cypher).\
 Remember to always try to call an existing program."}),
 (start)-[:NEXT]->(call_program),
 (call_program)-[:NEXT]->(is_successfully_called),
