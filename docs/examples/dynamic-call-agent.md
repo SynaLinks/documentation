@@ -4,6 +4,10 @@ sidebar_position: 4
 
 # Dynamic Call Agent
 
+Learn how to build an agent that dynamically calls primitive programs
+
+### Managing a large or growing library of programs
+
 With HybridAGI, the ability to act is limited to what's defined in its prompt program. But to expand its cognitive capabilities, we need to explore self-programming. Before diving into that, let's talk about dynamic program call.
 
 When we're dealing with systems that learn or have lots of programs, managing each case in the main program becomes impractical. That's where dynamic program calls come in.
