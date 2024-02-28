@@ -8,10 +8,11 @@ slug: '/'
 ### What is HybridAGI?
 HybridAGI is the first *Programmable LLM-based Autonomous Agent* that lets you program its behavior using a **graph-based prompt programming** approach. This state-of-the-art feature allows the AGI to efficiently use any tool while controlling the long-term behavior of the agent.
 
-## Quickstart in 5 simple steps!
+## Chat Demo: Quickstart in 5 simple steps (recommended)!
 
 #### What you need to start?
-- A TogetherAI API key (get one at [https://api.together.xyz/](https://api.together.xyz/))
+
+- A MistralAI API key (get one at https://mistral.ai/)
 - [Git](https://git-scm.com/downloads) and [Docker](https://www.docker.com/products/docker-desktop/)
 
 ### Installation
@@ -66,6 +67,14 @@ Now it is time to deploy this app, just use the following command:
 docker-compose up
 ```
 
+## CLI Demo
+
+To use the CLI demo, rename the `.env.template` file into `.env`, replace `your-api-key` with your actual MistralAI API key and use the following command:
+
+```
+docker compose run -it hybrid-agi-cli
+```
+
 ### Inspect the database
 
-Open your browser at `http://localhost:8001` and connect to an existing database with the hostname `falkordb` and port `6379`.
+Open your browser at `http://localhost:8001` and connect to an existing database with the hostname `hybrid-agi-db` and port `6379`.

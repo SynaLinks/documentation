@@ -24,7 +24,7 @@ Here is a list of the native Tools we designed for HybridAGI
 | `WriteFiles` | Write into files, or override if existing |
 | `AppendFiles`|  Append data to files, or create if non-existing |
 | `ReadFile` | Read data chunk by chunk (use multiple times to scroll) |
-| `Shell` | Enable unix commands: [`cd`, `ls`, `mkdir`, `mv`, `pwd`, `rm`] |
+| `Shell` | Replicate unix commands to navigate inside the hybrid database: [`cd`, `ls`, `mkdir`, `mv`, `pwd`, `rm`, `tree`] |
 | `Upload` | Archive and upload the target folder or file to the User |
 | `ContentSearch` | Perform a similarity based search and fetch the content |
 | `ReadProgram` | Read a program based on its name |
@@ -39,4 +39,7 @@ Here is a list of the native Tools we designed for HybridAGI
 | `AskUser` | Ask a question to the user |
 | `Speak` | Tell something to the User |
 | `InternetSearch` | Perform a DuckDuckGo search |
+| `BrowseWebsite` | Browse a website chunk by chunk (use multiple times to scroll) |
+| `Arxiv` | Perform a search on [Arxiv](https://arxiv.org/) |
+
 </div>
