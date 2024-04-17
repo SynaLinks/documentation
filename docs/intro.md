@@ -1,6 +1,6 @@
----https://dspy-docs.vercel.app/docs/intro
+---
 sidebar_position: 1
-slug: '/'
+slug: "/"
 ---
 
 # Introduction
