@@ -1,4 +1,4 @@
----
+---https://dspy-docs.vercel.app/docs/intro
 sidebar_position: 1
 slug: '/'
 ---
@@ -8,73 +8,41 @@ slug: '/'
 ### What is HybridAGI?
 HybridAGI is the first *Programmable LLM-based Autonomous Agent* that lets you program its behavior using a **graph-based prompt programming** approach. This state-of-the-art feature allows the AGI to efficiently use any tool while controlling the long-term behavior of the agent.
 
-## Chat Demo: Quickstart in 5 simple steps (recommended)!
+The new version of HybridAGI is now a DSPy component, learn more about [DSPy](https://dspy-docs.vercel.app/docs/intro) and how you can use it to optimize your prompt or finetune your model.
 
 #### What you need to start?
 
-- A MistralAI API key (get one at https://mistral.ai/)
-- [Git](https://git-scm.com/downloads) and [Docker](https://www.docker.com/products/docker-desktop/)
+- [Git](https://git-scm.com/downloads) and [Docker](https://www.docker.com/products/docker-desktop/), [Python](https://www.python.org/).
 
-### Installation
+Additionally you can install [Ollama](https://ollama.com/) for the demon, pull `mistral` model and start the ollama server.
 
-First, clone the chat repository with:
-
-```shell
-git clone https://github.com/SynaLinks/HybridAGI-chat
-cd HybridAGI-chat
-```
-
-### Directory hierarchy
-
-Then open the repository folder in your favorite IDE ([VSCodium](https://vscodium.com/) with the Neo4J plugin is a good start). 
+### 1. Installation 
 
 ```shell
-📦HybridAGI-chat
-┣ 📂archives  # This is where the AGI will save the archives when uploading file or folders
-┣ 📂documentation # This is where you can put your pdf and documents for similarity search
-┣ 📂programs # This is where you should put your Cypher programs
-┣ 📂src # The source code of the UI
-... the license and other files related to deployment
+git clone https://github.com/SynaLinks/HybridAGI
+cd HybridAGI
+virtualenv venv
+source venv/bin/activate
+pip install poetry # If you don't have it already
+poetry install
 ```
 
-Note that these folders are shared with the application container, you should use them to share data between your filesystem and the AI system.
-
-### Echo test program
-
-Start with a simple echo test, create a `main.cypher` file inside the `programs` folder:
-
-```javascript
-// Nodes declaration
-CREATE
-(start:Control {name:"Start"}),
-(end:Control {name:"End"}),
-(echo_objective:Action {
-  name:"Reformulate the Objective",
-  tool:"Speak",
-  prompt:"Please reformulate the objective using other words"}),
-// Structure declaration
-(start)-[:NEXT]->(echo_objective),
-(echo_objective)-[:NEXT]->(end)
-```
-
-Learn more about Graph-based Prompt Programming by reading our [documentation](https://synalinks.github.io/documentation/basics/graph-prompt-programming).
-
-### Deploy your app
-
-Now it is time to deploy this app, just use the following command:
-
-```shell
-docker-compose up
-```
-
-## CLI Demo
-
-To use the CLI demo, rename the `.env.template` file into `.env`, replace `your-api-key` with your actual MistralAI API key and use the following command:
+### 2. Setup the Knowledge Base (needed for the system to work)
 
 ```
-docker compose run -it hybrid-agi-cli
+docker compose up
 ```
 
-### Inspect the database
+### 3. Run the tests to check your install
 
-Open your browser at `http://localhost:8001` and connect to an existing database with the hostname `hybrid-agi-db` and port `6379`.
+```
+poetry run pytest -vv
+```
+
+### 4. Start programmming & optimizing or finetuning your model
+
+See the [examples](https://github.com/SynaLinks/HybridAGI/tree/main/examples) to learn how HybridAGI use [DSPy](https://dspy-docs.vercel.app/) to enhance itself.
+
+You have acces to many [remote LLMs](https://dspy-docs.vercel.app/api/category/language-model-api-clients) and [local ones](https://dspy-docs.vercel.app/api/category/local-language-model-clients).
+
+You can start to learn more about [graph prompt programming](basics/graph-prompt-programming.md) is this first tutorial.

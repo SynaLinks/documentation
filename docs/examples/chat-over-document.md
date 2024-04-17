@@ -30,7 +30,7 @@ CREATE
 (end:Control {name:"End"}),
 (similarity_search:Action {
     name:"Search for answer in the filesystem",
-    tool:"ContentSearch",
+    tool:"DocumentSearch",
     prompt:"Elaborate on what you want to know"}),
 (answer:Action {
     name:"Answer based on the above search",

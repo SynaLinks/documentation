@@ -29,11 +29,13 @@ This novel approach to represent and work with unstructured knowledge has given 
 
 The fusion of these two types of representation is fundamental to our vision of the future and the neuro-symbolic approach. This hybrid representation allows for similarity-based data retrieval strategies combined with precise and efficient strategies provided by graphs.
 
-Our framework currently supports two types of knowledge storage:
+Our framework currently supports 3 types of knowledge storage:
 
 - **Filesystem:** Stores documents along with their folders, enabling the system to navigate its long-term memory using a shell.
   
 - **Program Memory:** Stores the graph prompt programs and provides the dependency graph of HybridAGI's programs.
+
+- **Trace Memory:** Stores the program traces and index each past action.
 
 Both structures contain, at their leaves, content indexed by the embedding vectors, enabling the system to perform similarity-based searches.
 

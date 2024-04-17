@@ -33,7 +33,7 @@ CREATE
 ### Speeding Up the Program
 
 You can use this feature to accelerate your programs and enhance their responsiveness.
-Or if you want to use a tool in a way that doesn't require inference at runtime. For example, this code snippet uses the `Shell` Tool to list the current working directory.
+Or if you want to use a tool in a way that doesn't require inference at runtime. For example, this code snippet uses the `InternalShell` Tool to list the current working directory.
 
 ```javascript title="list_current_folder.cypher"
 // @desc: List the current folder
@@ -42,7 +42,7 @@ CREATE
 (end:Control {name:"End"}),
 (list_folder:Action {
     name:"List the current working directory",
-    tool:"Shell",
+    tool:"InternalShell",
     prompt:"ls",
     disable_inference:"true"}),
 (start)-[:NEXT]->(list_folder),

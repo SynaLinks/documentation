@@ -14,6 +14,6 @@ This feature is particularly crucial for safety reasons, as the main program is 
 
 For this reason, we protect each program that depends on the main program. This check is performed through the dependency graph implemented in the program memory.
 
-In our context, this means that a protected program cannot be called by `CallProgram`, modified by `LoadProgram`, and is not retrievable by `ProgramSearch`.
+In our context, this means that a protected program cannot be called by `CallProgram`, modified by `WriteProgram`, and is not retrievable by `ProgramSearch`.
 
 This constraint ensures that HybridAGI can only dynamically call programs disjoint from the main program. Feel free to check the dependency graph of your app!

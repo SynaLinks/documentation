@@ -21,25 +21,26 @@ Here is a list of the native Tools we designed for HybridAGI
 
 | Tool         | Description                               |
 |--------------|:------------------------------------------:|
-| `WriteFiles` | Write into files, or override if existing |
-| `AppendFiles`|  Append data to files, or create if non-existing |
+| `WriteFile` | Write into a file, or override if existing |
+| `AppendFile`|  Append data to a file, or create one if non-existing |
 | `ReadFile` | Read data chunk by chunk (use multiple times to scroll) |
-| `Shell` | Replicate unix commands to navigate inside the hybrid database: [`cd`, `ls`, `mkdir`, `mv`, `pwd`, `rm`, `tree`] |
+| `InternalShell` | Replicate unix commands to navigate inside the hybrid database: [`cd`, `ls`, `mkdir`, `mv`, `pwd`, `rm`, `tree`] |
+| `RemoteShell` | Allow command execution in the sandbox container |
 | `Upload` | Archive and upload the target folder or file to the User |
-| `ContentSearch` | Perform a similarity based search and fetch the content |
+| `DocumentSearch` | Perform a similarity based search in the filesystem and fetch the passages |
 | `ReadProgram` | Read a program based on its name |
-| `ProgramSearch` | Perform a similarity based search and list the top-5 most relevant |
-| `LoadPrograms` | Load programs, override if existing |
+| `ProgramSearch` | Perform a similarity based search into the program memory |
+| `PastActionSearch` | Perform a similarity based search into the trace memory |
+| `WriteProgram` | Load a program, override if existing |
 | `CallProgram` | Call a program based on its name |
 | `UpdateObjective` | Update the long-term objective |
-| `UpdateNote` | Update the note (used as reminder) |
 | `Predict` | Populate the prompt with intermediary data for reasoning |
 | `RevertTrace` | Remove from the trace the N last steps |
 | `ClearTrace` | Clear the trace from the prompt |
 | `AskUser` | Ask a question to the user |
 | `Speak` | Tell something to the User |
-| `InternetSearch` | Perform a DuckDuckGo search |
-| `BrowseWebsite` | Browse a website chunk by chunk (use multiple times to scroll) |
-| `Arxiv` | Perform a search on [Arxiv](https://arxiv.org/) |
+| `DuckDuckGoSearch` | Perform a DuckDuckGo search |
+
+We are expanding this list, so feel free to suggest us more tools to add.
 
 </div>

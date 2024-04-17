@@ -148,8 +148,4 @@ Remember to always try to call an existing program."}),
 (is_successfully_called)-[:YES]->(end)
 ```
 
-In addition to that, the [Primitives Pack](https://github.com/SynaLinks/primitives-pack) have been added to add basic functionnalities to the agent.
-
-You can find the complete implementation in the following [repository](https://github.com/SynaLinks/dynamic-call-agent)
-
-Do not hesitate to modify the prompt to fit your usecase and LLM.
+Do not hesitate to modify the prompt to fit your usecase.
