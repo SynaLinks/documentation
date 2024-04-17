@@ -39,7 +39,7 @@ docker compose up
 poetry run pytest -vv
 ```
 
-### 4. Start programmming & optimizing or finetuning your model
+### 4. Start programmming and optimizing or finetuning your model
 
 See the [examples](https://github.com/SynaLinks/HybridAGI/tree/main/examples) to learn how HybridAGI use [DSPy](https://dspy-docs.vercel.app/) to enhance itself.
 
