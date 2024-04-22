@@ -156,8 +156,8 @@ Program Purpose: What's the meaning of life?
 Call Program: clarify_objective
 Program Purpose: Clarify the objective if needed
  --- Step 2 ---
-Decision Purpose: Find out if there is anything unclear in the Objective
-Decision Question: Is the Objective unclear?
+Decision Purpose: Check if the objective is unclear
+Decision Question: Is the objective still unclear?
 Decision: MAYBE
  --- Step 3 ---
 Action Purpose: Ask question to clarify the objective
@@ -172,8 +172,8 @@ Action: {
   "observation": "Successfully updated"
 }
  --- Step 5 ---
-Decision Purpose: Find out if there is anything unclear in the Objective
-Decision Question: Is the Objective unclear?
+Decision Purpose: Check if the objective is unclear
+Decision Question: Is the objective still unclear?
 Decision: NO
  --- Step 6 ---
 End Program: clarify_objective
