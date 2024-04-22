@@ -70,8 +70,8 @@ CREATE
 (start:Control {name:"Start"}),
 (end:Control {name:"End"}),
 (is_anything_unclear:Decision {
-    name:"Find out if there is anything unclear in the Objective", 
-    question:"Is the Objective unclear?"}),
+    name:"Check if the objective is unclear", 
+    question:"Is the Objective still unclear?"}),
 (ask_question:Action {
     name:"Ask question to clarify the objective",
     tool:"AskUser",
@@ -94,7 +94,7 @@ CREATE
 
 Let's break down what this program does:
 
-- `(is_anything_unclear:Decision {name:"Find out if there is anything unclear in the Objective", question:"Is the Objective unclear?"})`: Creates a Decision Node named "is_anything_unclear." This node checks whether the objective is unclear, asking the question "Is the Objective unclear?".
+- `(is_anything_unclear:Decision {name:"Check if the objective is unclear", question:"Is the objective still unclear?"})`: Creates a Decision Node named "is_anything_unclear." This node checks whether the objective is unclear, asking the question "Is the Objective unclear?".
 
 - `(ask_question:Action {name:"Ask question to clarify the objective", tool:"AskUser", prompt:"Pick one question to clarify the Objective"})`: Creates an Action Node named "ask_question." If the objective is unclear, this node prompts the system to ask a question to clarify the objective, utilizing the "AskUser" tool.
 
