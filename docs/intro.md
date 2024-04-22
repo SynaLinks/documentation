@@ -2,9 +2,9 @@
 sidebar_position: 1
 slug: "/"
 ---
-# HybridAGI: The Programmable Neuro-Symbolic AGI for people who want AI to behave as expected
-
 # Introduction
+
+## HybridAGI: The Programmable Neuro-Symbolic AGI for people who want AI to behave as expected
 
 ### What is HybridAGI?
 
