@@ -29,7 +29,7 @@ This novel approach to represent and work with unstructured knowledge has given 
 
 The fusion of these two types of representation is fundamental to our vision of the future and the neuro-symbolic approach. This hybrid representation allows for similarity-based data retrieval strategies combined with precise and efficient strategies provided by graphs.
 
-Our framework currently supports 3 types of knowledge storage:
+Our framework currently supports 3 types of knowledge store:
 
 - **Filesystem:** Stores documents along with their folders, enabling the system to navigate its long-term memory using a shell.
   
@@ -42,13 +42,20 @@ Both structures contain, at their leaves, content indexed by the embedding vecto
 <figure>
   <p align="center">
     ![HybridAGI filesystem](img/filesystem.png)
-    <figcaption align="center"><b>Fig.2 - HybridAGI long-term memory implementing a file system-like structure of folders and files.</b></figcaption>
+    <figcaption align="center"><b>Fig.2 - HybridAGI's long-term memory implements a file system-like structure of folders and files. This architecture enables the AI system to navigate and explore its vector store in a Unix-like fashion.</b></figcaption>
   </p>
 </figure>
 
 <figure>
   <p align="center">
     ![HybridAGI program memory](img/program_memory.png)
-    <figcaption align="center"><b>Fig.3 - HybridAGI program memory implementing the dependency graph of its prompt programs.</b></figcaption>
+    <figcaption align="center"><b>Fig.3 - HybridAGI's program memory implements the dependency graph of its prompt programs. This structure protects the main prompt program from being modified by the AI system.</b></figcaption>
+  </p>
+</figure>
+
+<figure>
+  <p align="center">
+    ![HybridAGI trace memory](img/trace_memory.png)
+    <figcaption align="center"><b>Fig.4 - HybridAGI's trace memory indexes each past action, allowing the AI system to recall past actions between sessions.</b></figcaption>
   </p>
 </figure>
