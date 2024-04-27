@@ -37,7 +37,7 @@ Our framework currently supports 3 types of knowledge store:
 
 - **Trace Memory:** Stores the program traces and index each past action.
 
-Both structures contain, at their leaves, content indexed by the embedding vectors, enabling the system to perform similarity-based searches.
+Each structure contains content indexed by the embedding vectors at their leaves, enabling the system to perform similarity-based searches.
 
 <figure>
   <p align="center">
