@@ -29,13 +29,15 @@ This novel approach to represent and work with unstructured knowledge has given 
 
 The fusion of these two types of representation is fundamental to our vision of the future and the neuro-symbolic approach. This hybrid representation allows for similarity-based data retrieval strategies combined with precise and efficient strategies provided by graphs.
 
-Our framework currently supports 3 types of knowledge store:
+Our framework currently supports 4 types of knowledge store:
 
 - **Filesystem:** Stores documents along with their folders, enabling the system to navigate its long-term memory using a shell.
   
 - **Program Memory:** Stores the graph prompt programs and provides the dependency graph of HybridAGI's programs.
 
 - **Trace Memory:** Stores the program traces and index each past action.
+
+- **Fact Memory:** Stores the knowledge triplets (also called predicates) with each entity being indexed allowing the system to search for factual knowledge.
 
 Each structure contains content indexed by the embedding vectors at their leaves, enabling the system to perform similarity-based searches.
 
@@ -57,5 +59,12 @@ Each structure contains content indexed by the embedding vectors at their leaves
   <p align="center">
     ![HybridAGI trace memory](img/trace_memory.png)
     <figcaption align="center"><b>Fig.4 - HybridAGI's trace memory indexes each past action, allowing the AI system to recall past actions between sessions.</b></figcaption>
+  </p>
+</figure>
+
+<figure>
+  <p align="center">
+    ![HybridAGI fact memory](img/trace_memory.png)
+    <figcaption align="center"><b>Fig.4 - HybridAGI's fact memory indexes each entity, allowing graph augmented generation.</b></figcaption>
   </p>
 </figure>
