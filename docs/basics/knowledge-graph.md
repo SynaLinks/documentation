@@ -64,7 +64,7 @@ Each structure contains content indexed by the embedding vectors at their leaves
 
 <figure>
   <p align="center">
-    ![HybridAGI fact memory](img/trace_memory.png)
+    ![HybridAGI fact memory](img/fact_memory.png)
     <figcaption align="center"><b>Fig.4 - HybridAGI's fact memory indexes each entity, allowing graph augmented generation.</b></figcaption>
   </p>
 </figure>
