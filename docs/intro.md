@@ -21,17 +21,17 @@ It is the first programmable LLM-based agent that enables you to define its beha
 
 ## Why HybridAGI?
 
-We not satisfied with the current trajectory of Agent based systems that lack control and efficiency. Todays approach is to build react/MKRL agents that do what they want without any human control resulting in infinite loops of nonsense because they tend to stay in their data distribution. Multi-agents systems try to solve that, but instead result in more nonsense and prohibitive costs due to the agents chitchatting with each other. Moreover todays agents require finetuning to enhance/correct the behavior of the agent system (it is not a coincidence that big AI players also offer finetuning services), in contrast with HybridAGI the only thing you need to do is to modify the behavior graph.
+We are not satisfied with the current trajectory of Agent-based systems that lack control and efficiency. Today's approach is to build reactive/MKRL agents that do what they want without any human control, resulting in infinite loops of nonsense because they tend to stay in their data distribution. Multi-agent systems try to solve that, but instead result in more nonsense and prohibitive costs due to the agents chitchatting with each other. Moreover, today's agents require fine-tuning to enhance/correct the behavior of the agent system. In contrast, with HybridAGI, the only thing you need to do is to modify the behavior graph.
 
-What we advocade, is that finetuning should be done only as last ressort when in-context learning fails to give you the expected result. Any person that already finetuned a LLM knows that gathering data is hard, but having the right variability in your dataset is even harder, thus prohibiting most companies to leverage this technology if they don't have many AI scientists. By rooting cognitive sciences into computer science concepts, without obfuscing them, we empower programmers to build the Agent system of their dreams by controlling the sequence of action and decision.
+We advocate that fine-tuning should be done only as a last resort when in-context learning fails to give you the expected result. Any person who has already fine-tuned a LLM knows that gathering data is hard, but having the right variability in your dataset is even harder, thus prohibiting most companies from leveraging this technology if they don't have many AI scientists. By rooting cognitive sciences into computer science concepts, without obfuscating them, we empower programmers to build the Agent system of their dreams by controlling the sequence of action and decision.
 
 Our goal is to build an agent system that solves real-world problems by using an intermediary language interpretable by both humans and machines. If we want to keep humans in the loop in the coming years, we need to design Agent systems for that purpose.
 
 ### Deterministic approach & infinite number of tools
 
-To us, an agent system is an intelligent/cognitive software that can process natural language and execute the tasks it has been programmed to perform. Just like with traditional software, the developer specify the behavior of the application, and the system is not truly autonomous unless it has been programmed to be so. Programming the system not only helps the agent to carry out its tasks but also allows for the *formalization of the developer's intent*.
+To us, an agent system is an intelligent/cognitive software that can process natural language and execute the tasks it has been programmed to perform. Just like with traditional software, the developer specifies the behavior of the application, and the system is not truly autonomous unless it has been programmed to be so. Programming the system not only helps the agent to carry out its tasks but also allows for the *formalization of the developer's intent*.
 
-Our approach reduces the need for fine-tuning, as we can control the behavior of the system in a deterministic way from end to end. You will **not** find any React/MKRL agents in our implementation, unlike in traditional agent frameworks such as LangChain/LangGraph or Llama-Index. Furthermore, our approach enables the system to handle an unlimited number of tools, as we do not allow the system to decide which one to use at each step.
+Our approach reduces the need for fine-tuning, as we can control the behavior of the system in a deterministic way from end to end. You will **not** find any reactive/MKRL agents in our implementation, unlike in traditional agent frameworks such as LangChain/LangGraph or Llama-Index. Furthermore, our approach enables the system to handle an unlimited number of tools, as we do not allow the system to decide which one to use at each step.
 
 ### Automatic optimization & hybrid vector/graph long-term memory
 
@@ -191,7 +191,7 @@ The memory is another aspect where HybridAGI is unique. First we centralize know
 <figure>
   <p align="center">
     ![HybridAGI fact memory](assets/memories.svg)
-    <figcaption align="center"><b>Fig.1 - HybridAGI's memories. Each memory system can be used in combinaiton with each other providing the best of vectors and graph retrieval.</b></figcaption>
+    <figcaption align="center"><b>Fig.2 - HybridAGI's memories. Each memory system can be used in combinaiton with each other providing the best of vectors and graph retrieval.</b></figcaption>
   </p>
 </figure>
 
