@@ -78,7 +78,7 @@ class GreetTool(BaseTool):
             # Some parsing to clean up the prediction
             pred.name = self.prediction_parser.parse(pred.name, prefix = "Name:", stop = ["\n"])
             # Then we can call our python function
-            message = self.greet(pred.name)
+            message = greet(pred.name)
             # The tool always returns a dspy.Prediction with the tools's input and output to give to the system the 
             # possibility to enhance its reasoning by calling a tool multiple times.
             return dspy.Prediction(
