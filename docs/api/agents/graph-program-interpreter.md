@@ -2,7 +2,7 @@
 
 The Graph Program Interpreter serves as the primary agent within the HybridAGI framework. Similar to how a Python interpreter processes a program line by line, this agent interprets a graph program node by node. This approach enables the agent to demonstrate explainable behavior, as it executes only the actions and decisions specified by the graph. The deterministic nature of this behavior is vital for the development of explainable systems and allows developers to improve and correct the agent's behavior without the need for fine-tuning.
 
-In contrast to React agents, which depend heavily on the training of Language Language Models (LLMs) to manage new tasks, HybridAGI has the ability to direct the agent to act beyond the limits of its data distribution. This capability enables HybridAGI to handle previously unencountered tasks with ease and control.
+In contrast to React agents, which depend heavily on the training of the Language Models (LMs) to manage new tasks, HybridAGI has the ability to direct the agent to act beyond the limits of its data distribution. This capability enables HybridAGI to handle previously unencountered tasks with ease and control.
 
 By not permitting the agent system to decide which tool to use at each step, HybridAGI can accommodate an infinite number of tools. This is a significant advantage over React-based agent architectures or agents that rely on function calling. Furthermore, this mechanism allows for the use of smaller LLMs that have not been specifically trained to use function calling or tools.
 
