@@ -40,8 +40,13 @@ from typing import Optional
 
 class BaseTool(dspy.Module):
 
-    def __init__(self, name: str):
+    def __init__(
+            self,
+            name: str,
+            lm = Optional[dspy.LM] = None,
+        ):
         self.name = name
+        self.lm = lm
 
     @abc.abstractmethod
     def forward(
@@ -51,7 +56,6 @@ class BaseTool(dspy.Module):
             purpose: str,
             prompt: str,
             disable_inference: bool = False,
-            llm: Optional[dspy.LM] = None
         ) -> dspy.Prediction:
         pass
 ```
@@ -88,7 +92,7 @@ class GreetTool(BaseTool):
             self,
             lm = Optional[dspy.LM] = None,
         ):
-        super().__init__(name = "Greet")
+        super().__init__(name = "Greet", lm = lm)
         self.predict = dspy.Predict(GreetSignature)
         self.prediction_parser = PredictionOutputParser()
     
