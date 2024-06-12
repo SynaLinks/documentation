@@ -2,7 +2,7 @@
 
 In HybridAGI, each tool is a DSPy module that is optimized in the background when the interpreter calls it during optimization. 
 
-To add a new tool to HybridAGI, there are two ways to do it. The first way is easier, while the other gives you more control but involves more code.
+To add a new tool to HybridAGI, there are two ways to do it. The first way is easier, while the other one gives you more control but involves more code.
 
 Let's see the easiest way first:
 
