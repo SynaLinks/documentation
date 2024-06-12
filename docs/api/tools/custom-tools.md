@@ -56,7 +56,7 @@ class BaseTool(dspy.Module):
         pass
 ```
 
-To implement your own tool, here is a toy example:
+Here is the same example with the second method:
 
 ```python
 
