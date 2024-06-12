@@ -108,10 +108,10 @@ const config: Config = {
               label: 'Tutorial',
               to: '/docs/intro',
             },
-            {
-              label: 'API References',
-              to: '/docs/docs/category/agents',
-            },
+            // {
+            //   label: 'API References',
+            //   to: '/docs/api/agents',
+            // },
             {
               label: 'FAQ',
               to: '/docs/faq',
