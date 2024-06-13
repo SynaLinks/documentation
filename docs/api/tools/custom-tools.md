@@ -123,7 +123,7 @@ class GreetTool(BaseTool):
             # The tool always returns a dspy.Prediction with the tools's input and output to give to the system the 
             # possibility to enhance its reasoning by calling a tool multiple times.
             return dspy.Prediction(
-                name = pred.answer
+                name = pred.name
                 message = message
             )
         else:
