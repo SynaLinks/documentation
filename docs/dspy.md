@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Programming not Prompting
 
-**[DSPy](https://dspy-docs.vercel.app/)** is a machine learning framework for building LLM applications with a systematic approach by abstracting prompt engineering techniques and offering ways to evaluate your pipelines. Often when tackling a difficult task you will have to provide examples to your LLM, beside being time-consuming, handcrafting these examples can lead to the brittleness of your application specially if it involve numerous calls to LMs (like HybridAGI). When you change the LMs, you will have to re-design the prompts for that model. DSPy change that by emphazing small multi-input/multi-output prompts with automatic building of examples allowing a better control.
+**[DSPy](https://dspy-docs.vercel.app/)** is a machine learning framework for building LLM applications with a systematic approach by abstracting prompt engineering techniques and offering ways to evaluate your pipelines. Often when tackling a difficult task you will have to provide examples to your LLM, beside being time-consuming, handcrafting these examples can lead to the brittleness of your application specially if it involve numerous calls to LMs (like HybridAGI). When you change the pipeline, you will have to re-design the examples. DSPy change that by emphazing small multi-input/multi-output prompts with automatic building of examples allowing a better control and faster iteration.
 
 ## DSPy language models
 
@@ -148,7 +148,7 @@ class CheckHelpfullnessSignature(dspy.Signature):
         prefix="Helpful[Yes/No:]",
     )
 
-def check_helpfulness(example, prediction):
+def check_helpfulness(example, prediction, teacher_lm = Optional[dspy.LM]):
     # This line means that we discard the example if the agent reached the max iterations
     # Meaning it was probably stuck in a loop
     if prediction.finish_reason == "max iters":
